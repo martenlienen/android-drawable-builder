@@ -67,7 +67,7 @@ def copyTree (src, dst):
 
 	for root, dirs, files in os.walk(src):
 		relativeRoot = os.path.relpath(path=root, start=src)
-		print(root, dirs, files)
+
 		for file in files:
 			shutil.copy(src=os.path.join(root, file), dst=os.path.join(dst, relativeRoot))
 		for dir in dirs:
